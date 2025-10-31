@@ -1,0 +1,168 @@
+/* Variações de Cores */
+:root {
+    --cor-fundo-principal: #0D1C2B;
+    --cor-fundo-container: #1A2A3C;
+    --cor-azul-profundo: #004A7E;
+    --cor-ciano-brilhante: #00D6FF;
+    --cor-texto-principal: #FFFFFF;
+    --cor-texto-suave: #CCCCCC;
+}
+
+/* Base Geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Cabeçalho e Botão Voltar */
+.header {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px; /* Ajuste conforme o tamanho do seu logo */
+}
+
+.botao-voltar {
+    background-color: var(--cor-azul-profundo);
+    color: var(--cor-texto-principal);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao-voltar:hover {
+    background-color: #00609D;
+}
+
+/* Container Principal de Votação */
+.container-votacao {
+    background-color: var(--cor-fundo-container);
+    border: 1px solid var(--cor-azul-profundo);
+    box-shadow: 0 0 20px rgba(0, 214, 255, 0.2);
+    border-radius: 10px;
+    padding: 40px;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.titulo-principal {
+    color: var(--cor-ciano-brilhante);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Informações de Recompensas */
+.info-recompensas {
+    text-align: left;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: rgba(0, 74, 126, 0.3); /* Azul escuro semi-transparente */
+    border-radius: 5px;
+}
+
+.info-recompensas ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+.info-recompensas li {
+    margin-bottom: 5px;
+}
+
+/* Alerta BEDROCK */
+.alerta-bedrock {
+    background-color: var(--cor-azul-profundo);
+    border-left: 5px solid var(--cor-ciano-brilhante);
+    padding: 15px;
+    margin-bottom: 25px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.alerta-bedrock strong {
+    color: var(--cor-ciano-brilhante);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Desafio Comunitário */
+.desafio-comunitario {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--cor-ciano-brilhante);
+}
+
+/* Grid de Botões */
+.botoes-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    gap: 15px;
+}
+
+/* Estilo dos Botões de Voto */
+.botao-voto {
+    background: linear-gradient(135deg, var(--cor-ciano-brilhante) 0%, var(--cor-azul-profundo) 100%);
+    color: var(--cor-texto-principal);
+    padding: 15px 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--cor-ciano-brilhante);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.botao-voto:hover {
+    background: linear-gradient(135deg, var(--cor-ciano-brilhante) 0%, #00609D 100%);
+    box-shadow: 0 0 15px var(--cor-ciano-brilhante);
+    transform: translateY(-3px);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    font-size: 0.85em;
+    color: var(--cor-texto-suave);
+    padding: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .botoes-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets e celulares */
+    }
+    
+    .titulo-principal {
+        font-size: 1.6em;
+    }
+}
